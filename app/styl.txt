@@ -1,0 +1,81 @@
+
+/* Navbar specific styles */
+
+.bg-black {
+  background-color: #000;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.hover\\:text-gray-400:hover {
+  color: #cbd5e0;
+}
+
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Additional styles for toggle menu box */
+
+.absolute {
+  position: absolute;
+}
+
+.top-full {
+  top: 100%; /* Ensures the menu appears below the toggle icon */
+}
+
+.left-0 {
+  left: 0; /* Adjust as needed */
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+
+
+
+below font-hammer
+above problem
+
+.bg-gray-700 {
+  background-color: #4a4a4a;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+.bg-black {
+  background-color: #000;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
