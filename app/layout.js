@@ -6,8 +6,8 @@ import '@/app/globals.css';
 export default function Layout({ children }) {
   const pathname = usePathname(); // Get the current path
 
-  // Hide Navbar on the login/signup/reset page
-  const hideNavbar = pathname === '/login' || pathname === '/signup' || pathname === '/reset';
+  // Hides Navbar on the these page!
+  const hideNavbar = pathname === '/login' || pathname === '/signup' || pathname === '/reset' || pathname === '/dashboard';
 
   return (
     <html lang="en">
