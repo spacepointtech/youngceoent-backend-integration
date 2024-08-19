@@ -39,7 +39,7 @@ export default function HeroSection() {
           <div>
             {/* Responsive text size adjustments */}
             <h1 className="text-white text-4xl sm:text-6xl font-rubik-glitch">YOUNG CEO ENTERTAINMENT</h1>
-            <p className="text-white text-xl sm:text-2xl font-rubik-glitch mt-2">TRY NOW FOR FREE</p>
+            <p className="text-white text-xl sm:text-2xl font-rubik-glitch mt-2">TRY NOW FOR FREE!</p>
           </div>
         </div>
       </div>
