@@ -8,6 +8,12 @@ require('dotenv').config();
 require('./config/passport');
 
 const app = express();
+const paymentRoutes = require('./routes/payment');
+
+app.use(express.json());
+
+// Payment routes
+app.use('/api/payment', paymentRoutes);
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))

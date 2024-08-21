@@ -38,7 +38,7 @@ router.post('/login', (req, res, next) => {
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
-  res.redirect('http://localhost:3000/dashboard');
+  res.redirect('http://localhost:3000/subscription');
 });
 
 router.get('/logout', (req, res) => {
