@@ -1,24 +1,45 @@
-import React from 'react';
-import axios from 'axios';
-import { useRouter } from 'next/router';
+'use client';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default function Dashboard({ user }) {
+const Dashboard = () => {
+  const [plan, setPlan] = useState('');
   const router = useRouter();
 
-  const handleLogout = async () => {
-    await axios.get('http://localhost:5000/auth/logout', { withCredentials: true });
+  useEffect(() => {
+    // Fetch the selected plan from local storage
+    const storedPlan = localStorage.getItem('selectedPlan');
+    if (storedPlan) {
+      setPlan(storedPlan);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    // Clear the selected plan and any other user data from local storage
+    localStorage.removeItem('selectedPlan');
+    // Redirect to the login page
     router.push('/login');
   };
 
   return (
-    <div className="dashboard">
-      <h1>Hello, {user.email}</h1>
-      <button onClick={handleLogout}>Logout</button>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-800 text-white font-poppins">
+      {plan ? (
+        <h1 className="text-3xl font-bold">
+          Hello! Welcome to YCE - You're a {plan}
+        </h1>
+      ) : (
+        <h1 className="text-3xl font-bold">
+          Hello! Welcome to YCE - No subscription found
+        </h1>
+      )}
+      <button
+        onClick={handleLogout}
+        className="mt-8 px-4 py-2 bg-red-600 rounded-lg text-white font-semibold hover:bg-red-700"
+      >
+        Logout
+      </button>
     </div>
   );
-}
+};
 
-export async function getServerSideProps(context) {
-  const res = await axios.get('http://localhost:5000/auth/user', { headers: context.req.headers });
-  return { props: { user: res.data.user } };
-}
+export default Dashboard;

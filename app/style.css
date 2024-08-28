@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 /* reset-password.css */
 
 .reset-password-container {
@@ -71,4 +72,93 @@ h2 {
 .reset-link {
   color: #0d6efd; /* Bootstrap primary color */
   text-decoration: none;
+}
+
+
+
+
+/* SupportPage */
+
+/* Font and general styling */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+/* Search Bar */
+.search-input {
+  background-color: transparent;
+  border-color: #FFFFFF;
+  border-width: 1px;
+  padding-left: 48px;
+  color: white;
+}
+.search-icon {
+  left: 1rem; /* Adjust left value as needed */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Responsive Placeholder for Search Bar */
+.placeholder-right::placeholder {
+  text-align: left;
+  color: #FFFFFF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #484848;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5e5e5e;
+}
+
+/* Support Box */
+.support-box {
+  background-color: rgba(72, 72, 72, 0.24); /* 24% opacity */
+  border: 1px solid #A6A6A6;
+}
+
+/* Responsive Layout */
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2rem;
+  }
+
+  .search-input {
+    font-size: 0.875rem;
+    padding-left: 40px;
+  }
+
+  .support-box {
+    padding: 4px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-4xl {
+    font-size: 3rem;
+  }
+
+  .search-input {
+    padding-left: 44px;
+  }
 }

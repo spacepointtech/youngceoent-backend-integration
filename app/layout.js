@@ -7,7 +7,8 @@ export default function Layout({ children }) {
   const pathname = usePathname(); // Get the current path
 
   // Hides Navbar on the these page!
-  const hideNavbar = pathname === '/login' || pathname === '/signup' || pathname === '/reset' || pathname === '/subscription';
+  const hideNavbar = pathname === '/login' || pathname === '/signup' || pathname === '/reset' || pathname === '/subscription' 
+  || pathname === '/dashboard';
 
   return (
     <html lang="en">
