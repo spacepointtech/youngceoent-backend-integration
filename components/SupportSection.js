@@ -9,7 +9,7 @@ export default function SupportSection() {
         <div className="flex justify-center md:justify-start">
           <div className="w-full h-auto max-w-lg transform hover:scale-125 transition-all duration-500 ease-in-out animate-fade-in">
             <Image 
-              src="/images/Lo-fi concept-amico.svg" 
+              src="/images/1.svg" 
               alt="Support Illustration" 
               width={600}
               height={600}
