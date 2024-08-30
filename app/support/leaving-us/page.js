@@ -1,7 +1,7 @@
 'use client';
 import '@/app/style.css'
 import React, { useState } from 'react';
-import { FaSearch, FaChevronRight, FaChevronDown, FaEdit } from 'react-icons/fa';
+import { FaSearch, FaChevronRight, FaChevronDown, FaEdit, FaSadTear } from 'react-icons/fa';
 
 const LeavingUsComponent = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -51,14 +51,14 @@ const LeavingUsComponent = () => {
       <div className="container mx-auto px-6 pb-16">
         <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
           <div className="flex flex-col">
-            <FaEdit className="text-4xl mb-4 opacity-30"/>
-            <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
+            <FaSadTear className="text-4xl mb-4 opacity-30"/>
+            <h2 className="text-2xl font-semibold">Thinking of Leaving Us?</h2>
           </div>
           <div className="faq-logo">
             <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
           </div>
         </div>
-        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Answers to questions we are asked most often.</p>
+        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>We&apos;ll be sad to see you go...</p>
         <p className={`text-sm opacity-50 mb-12 ${openIndex !== null ? 'blur-md' : ''}`}>{filteredFaqItems.length} Articles</p>
 
         {/* FAQ Container */}
@@ -88,43 +88,20 @@ const LeavingUsComponent = () => {
   );
 };
 
-// Example FAQ items with sample answers
+
 const faqItems = [
   {
-    question: 'What do I need to start releasing music?',
-    answer: (
-      <>
-        Just{' '}
-        <a href="/signup" className="text-blue-500">
-          sign up
-        </a>{' '}
-        to YCE Hub for free with your email address 🚀
-        <br />
-        <br />
-        From your YCE Dashboard, you'll have the choice of creating a new Standard Release or Electronic/Dance Music Release! 🎶
-        <br />
-        <br />
-        Choose the one that's right for you and follow the step-by-step process on the Ditto Release Builder.
-      </>
-    ),
+    question: 'What happens if I stop paying my subscription?',
+    answer: 'If you stop paying your subscription, your account will be suspended, and you will lose access to premium features. Your releases will remain on streaming platforms, but new releases or updates will not be processed. You may also incur a cancellation fee, depending on your plan.'
   },
-  { question: 'How much does music distribution cost with Young CEO Entertainment?', answer: 'Our music distribution service costs vary depending on the plan you choose. We offer both one-time payment and subscription-based options.' },
-  { question: 'How do I remove a release from stores?', answer: 'To remove a release, log in to your account, navigate to your releases, and choose the option to take down your music from all stores.' },
-  { question: 'What payment methods does YCE accept?', answer: 'We accept various payment methods, including credit/debit cards, PayPal, and bank transfers.' },
-  { question: 'Will YCE promote my music?', answer: 'While YCE focuses on distribution, we do offer additional promotional services at an extra cost. Contact us for more details.' },
-  { question: 'How much will I get paid?', answer: 'Your earnings depend on your distribution plan and the revenue generated from your music streams and downloads.' },
-  { question: 'How do I create a new release?', answer: 'To create a new release, log in to your account, click on "Create Release," and follow the steps to upload your music, artwork, and metadata.' },
-  { question: 'Do I need to renew my subscription?', answer: 'If you are on a subscription-based plan, it will renew automatically unless you cancel it before the renewal date.' },
-  { question: 'Can I edit or remove my release after it’s been sent to stores?', answer: 'Yes, you can edit or remove your release, but certain changes may take time to reflect in all stores.' },
-  { question: 'Will YCE take any of my royalties?', answer: 'YCE does not take a percentage of your royalties. You keep 100% of your earnings.' },
-  { question: 'How long before my release date should I upload my music?', answer: 'We recommend uploading your music at least 2-3 weeks before your release date to ensure it is available on time.' },
-  { question: 'Can I choose where my music is released?', answer: 'Yes, you can select which platforms and regions your music is distributed to during the release creation process.' },
-  { question: 'When will royalties be paid into my account?', answer: 'Royalties are typically paid out monthly, but the timing can vary depending on the platform and payment method.' },
-  { question: 'How long will it take to review and approve my release?', answer: 'Review and approval usually take 1-2 business days, but it may vary depending on the complexity of your release.' },
-  { question: 'How can I find my Spotify URI?', answer: 'You can find your Spotify URI in the Spotify app by navigating to your profile or release, clicking on the three dots, and selecting "Copy Spotify URI".' },
-  { question: 'How does the affiliates program work?', answer: 'Our affiliates program allows you to earn commissions by referring new artists to our platform. Sign up through your account to get started.' },
-  { question: 'How to enter the Press Your Sound competition?', answer: 'To enter, submit your best track through our competition page before the deadline. Winners will be announced on our website and social media.' },
-  { question: 'How does YCE Music Mastering work?', answer: 'Our mastering service enhances your tracks with professional sound quality. Upload your tracks, and our team will handle the rest.' },
+  {
+    question: 'How do I delete my YCE Music account & cancel my subscription?',
+    answer: 'To delete your YCE Music account and cancel your subscription, log in to your account and go to "Account Settings." From there, select the option to cancel your subscription and follow the prompts. If you want to permanently delete your account, contact our support team for assistance.'
+  },
+  {
+    question: 'Can I withdraw royalties without an active subscription?',
+    answer: 'Yes, you can still withdraw royalties even if your subscription is inactive. However, you must ensure that your payout details are up-to-date and that there are no pending issues with your account. Inactive subscriptions may affect your ability to access additional features or services.'
+  },
 ];
 
 export default LeavingUsComponent;

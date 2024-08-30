@@ -1,7 +1,7 @@
 'use client';
 import '@/app/style.css';
 import React, { useState } from 'react';
-import { FaSearch, FaChevronRight, FaChevronDown, FaCheck } from 'react-icons/fa';
+import { FaSearch, FaChevronRight, FaChevronDown, FaMobileAlt } from 'react-icons/fa';
 
 const ApplicationSupportComponent = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -51,8 +51,8 @@ const ApplicationSupportComponent = () => {
       <div className="container mx-auto px-6 pb-16">
         <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
           <div className="flex flex-col">
-            <FaCheck className="text-4xl mb-4 opacity-30"/>
-            <h2 className="text-2xl font-semibold">The Basics</h2>
+            <FaMobileAlt className="text-4xl mb-4 opacity-30"/>
+            <h2 className="text-2xl font-semibold">Young Ceo Entertainment App</h2>
           </div>
           <div className="faq-logo">
             <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
@@ -90,22 +90,8 @@ const ApplicationSupportComponent = () => {
 
 // Example FAQ items
 const faqItems = [
-  { question: 'What is Young Ceo Entertainment', answer: '' },
-  { question: 'How much does music distribution cost with Young CEO Entertainment ?', answer: '' },
-  { question: 'Can I release music for multiple artists from one account ?', answer: '' },
-  { question: 'Who owns the rights to my music when I distribute with YCE ?', answer: '' },
-  { question: 'What does (In Review), (Scheduled) and (Sent To Stores) mean on my releases ?', answer: '' },
-  { question: 'Can I release music in specific countries ?', answer: '' },
-  { question: 'Can I view my music analytics in more detail ?', answer: '' },
-  { question: 'How does Pre-Release work ?', answer: '' },
-  { question: 'Can I edit or remove my release after its been sent to stores?', answer: '' },
-  { question: 'What is Pre-Order Instant Gratification ?', answer: '' },
-  { question: 'Can I set the price of my music ?', answer: '' },
-  { question: 'Can I release someone elses music from my account ?', answer: '' },
-  { question: 'Can I choose where my music is released ?', answer: '' },
-  { question: 'How many tracks are on a single, EP and album ?', answer: '' },
-  { question: 'When will my YCE Merch arrive ?', answer: '' },
-  { question: 'Does YCE Music offer a free trial?', answer: '' },
+  { question: 'How Can I get access to YCE App', answer: 'Hello Young Ceo! The App is Currently Under the development...!' },
+  
 ];
 
 export default ApplicationSupportComponent;

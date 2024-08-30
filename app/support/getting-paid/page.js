@@ -1,7 +1,7 @@
 'use client';
 import '@/app/style.css'
 import React, { useState } from 'react';
-import { FaSearch, FaChevronRight, FaChevronDown, FaEdit } from 'react-icons/fa';
+import { FaSearch, FaChevronRight, FaChevronDown, FaDollarSign } from 'react-icons/fa';
 
 const GetPaidComponent = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -51,14 +51,14 @@ const GetPaidComponent = () => {
       <div className="container mx-auto px-6 pb-16">
         <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
           <div className="flex flex-col">
-            <FaEdit className="text-4xl mb-4 opacity-30"/>
-            <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
+            <FaDollarSign className="text-4xl mb-4 opacity-30"/>
+            <h2 className="text-2xl font-semibold">Getting Paid</h2>
           </div>
           <div className="faq-logo">
             <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
           </div>
         </div>
-        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Answers to questions we are asked most often.</p>
+        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Info on earning and withdrawing royalties</p>
         <p className={`text-sm opacity-50 mb-12 ${openIndex !== null ? 'blur-md' : ''}`}>{filteredFaqItems.length} Articles</p>
 
         {/* FAQ Container */}
@@ -88,43 +88,76 @@ const GetPaidComponent = () => {
   );
 };
 
-// Example FAQ items with sample answers
+// Updated FAQ Items
 const faqItems = [
   {
-    question: 'What do I need to start releasing music?',
-    answer: (
-      <>
-        Just{' '}
-        <a href="/signup" className="text-blue-500">
-          sign up
-        </a>{' '}
-        to YCE Hub for free with your email address 🚀
-        <br />
-        <br />
-        From your YCE Dashboard, you'll have the choice of creating a new Standard Release or Electronic/Dance Music Release! 🎶
-        <br />
-        <br />
-        Choose the one that's right for you and follow the step-by-step process on the Ditto Release Builder.
-      </>
-    ),
+    question: 'How do I withdraw royalties?',
+    answer: 'To withdraw royalties, log in to your account and navigate to the "Payouts" section. You can choose your preferred payout method and follow the instructions to complete the withdrawal process. Payments are typically processed within 7-10 business days.'
   },
-  { question: 'How much does music distribution cost with Young CEO Entertainment?', answer: 'Our music distribution service costs vary depending on the plan you choose. We offer both one-time payment and subscription-based options.' },
-  { question: 'How do I remove a release from stores?', answer: 'To remove a release, log in to your account, navigate to your releases, and choose the option to take down your music from all stores.' },
-  { question: 'What payment methods does YCE accept?', answer: 'We accept various payment methods, including credit/debit cards, PayPal, and bank transfers.' },
-  { question: 'Will YCE promote my music?', answer: 'While YCE focuses on distribution, we do offer additional promotional services at an extra cost. Contact us for more details.' },
-  { question: 'How much will I get paid?', answer: 'Your earnings depend on your distribution plan and the revenue generated from your music streams and downloads.' },
-  { question: 'How do I create a new release?', answer: 'To create a new release, log in to your account, click on "Create Release," and follow the steps to upload your music, artwork, and metadata.' },
-  { question: 'Do I need to renew my subscription?', answer: 'If you are on a subscription-based plan, it will renew automatically unless you cancel it before the renewal date.' },
-  { question: 'Can I edit or remove my release after it’s been sent to stores?', answer: 'Yes, you can edit or remove your release, but certain changes may take time to reflect in all stores.' },
-  { question: 'Will YCE take any of my royalties?', answer: 'YCE does not take a percentage of your royalties. You keep 100% of your earnings.' },
-  { question: 'How long before my release date should I upload my music?', answer: 'We recommend uploading your music at least 2-3 weeks before your release date to ensure it is available on time.' },
-  { question: 'Can I choose where my music is released?', answer: 'Yes, you can select which platforms and regions your music is distributed to during the release creation process.' },
-  { question: 'When will royalties be paid into my account?', answer: 'Royalties are typically paid out monthly, but the timing can vary depending on the platform and payment method.' },
-  { question: 'How long will it take to review and approve my release?', answer: 'Review and approval usually take 1-2 business days, but it may vary depending on the complexity of your release.' },
-  { question: 'How can I find my Spotify URI?', answer: 'You can find your Spotify URI in the Spotify app by navigating to your profile or release, clicking on the three dots, and selecting "Copy Spotify URI".' },
-  { question: 'How does the affiliates program work?', answer: 'Our affiliates program allows you to earn commissions by referring new artists to our platform. Sign up through your account to get started.' },
-  { question: 'How to enter the Press Your Sound competition?', answer: 'To enter, submit your best track through our competition page before the deadline. Winners will be announced on our website and social media.' },
-  { question: 'How does YCE Music Mastering work?', answer: 'Our mastering service enhances your tracks with professional sound quality. Upload your tracks, and our team will handle the rest.' },
+  {
+    question: 'How do I add a royalty payout method?',
+    answer: 'Go to the "Account Settings" or "Payout Settings" section in your account dashboard. There, you can add or update your preferred payout method, such as bank transfer, PayPal, or other available options.'
+  },
+  {
+    question: 'My payments aren\'t working. Can I change my royalty payout method?',
+    answer: 'Yes, if you’re experiencing issues with payments, you can change your payout method by accessing the "Payout Settings" in your account. Ensure that your new payment details are correctly entered and saved.'
+  },
+  {
+    question: 'How do I withdraw royalties with Payoneer?',
+    answer: 'To withdraw royalties using Payoneer, you need to link your Payoneer account in the "Payout Settings" section of your dashboard. Once linked, you can select Payoneer as your payout method when requesting a withdrawal.'
+  },
+  {
+    question: 'How do I get more streams & sales?',
+    answer: 'To increase streams and sales, consider investing in marketing and promotional strategies. Utilize social media, collaborate with influencers, and optimize your music for search engines. Engaging with your audience and releasing high-quality content regularly can also boost your visibility.'
+  },
+  {
+    question: 'What is the minimum amount I can withdraw?',
+    answer: 'The minimum withdrawal amount varies depending on the payout method and the platform’s policies. Typically, the minimum is set to ensure that transaction fees are covered. Check the specific requirements in your payout settings.'
+  },
+  {
+    question: 'What does Pending License Verification mean?',
+    answer: 'Pending License Verification means that your release is currently undergoing a review process to ensure that all licensing requirements are met. This process helps verify that your music is compliant with copyright and licensing regulations before it goes live.'
+  },
+  {
+    question: 'Can I automatically split royalties with collaborators, band members etc?',
+    answer: 'Yes, you can set up split royalties by defining the distribution percentages among collaborators and band members in the release settings. Ensure all parties involved are added and their share is accurately specified.'
+  },
+  {
+    question: 'How do I add split royalty payments to a release?',
+    answer: 'To add split royalty payments, go to the "Release Settings" during the release creation or editing process. You can specify the percentage of royalties each collaborator or band member will receive.'
+  },
+  {
+    question: 'How do I edit or remove split royalty payments from a release?',
+    answer: 'To edit or remove split royalty payments, access the "Release Settings" in your account. You can modify the payment splits or remove collaborators as needed. Changes will be reflected in future payments.'
+  },
+  {
+    question: 'What’s the difference between Track Splits and Release Splits?',
+    answer: 'Track Splits allocate royalties based on individual tracks within a release, while Release Splits allocate royalties across the entire release. Choose the appropriate option based on how you want to distribute earnings among tracks or releases.'
+  },
+  {
+    question: 'What are pending royalties?',
+    answer: 'Pending royalties are earnings that have been accumulated but not yet processed for payout. This can occur due to delays in payment processing, pending sales reports, or adjustments that need to be made before finalizing the payout.'
+  },
+  {
+    question: 'Can I withdraw royalties to PayPal?',
+    answer: 'Yes, you can withdraw royalties to PayPal if you have linked your PayPal account in the "Payout Settings." Ensure your PayPal account is correctly set up and verified to receive payments.'
+  },
+  {
+    question: 'Why do I need to enter my bank details again for royalty payouts?',
+    answer: 'You may need to re-enter your bank details if there have been changes to our payment systems, or if your details were not saved correctly. This ensures that your payments are directed to the correct account.'
+  },
+  {
+    question: 'Bank transfer fees for royalty payouts',
+    answer: 'Bank transfer fees may apply depending on your bank and the amount being transferred. Check with your bank for specific fees associated with receiving international or domestic transfers.'
+  },
+  {
+    question: 'Why is my royalty payment lower than I expected?',
+    answer: 'Royalty payments may be lower due to various factors such as transaction fees, distribution costs, or adjustments based on sales reports. Review your account statements and payout history for details.'
+  },
+  {
+    question: 'Why don’t my streams and views match my royalty payments?',
+    answer: 'Differences between streams/views and royalty payments can occur due to factors like processing delays, reporting discrepancies, or adjustments for refunds and chargebacks. Ensure you review detailed reports for accurate insights.'
+  },
 ];
 
 export default GetPaidComponent;

@@ -1,8 +1,10 @@
 'use client';
+import '@/app/style.css'
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { FaSearch, FaChevronRight, FaChevronDown, FaEdit } from 'react-icons/fa';
 
-const EditSupportComponent = () => {
+const EditSupport = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -54,10 +56,10 @@ const EditSupportComponent = () => {
             <h2 className="text-2xl font-semibold">Making Edits</h2>
           </div>
           <div className="faq-logo">
-            <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
+            <Image src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
           </div>
         </div>
-        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>How to make changes to your release</p>
+        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Answers to questions we are asked most often.</p>
         <p className={`text-sm opacity-50 mb-12 ${openIndex !== null ? 'blur-md' : ''}`}>{filteredFaqItems.length} Articles</p>
 
         {/* FAQ Container */}
@@ -86,24 +88,47 @@ const EditSupportComponent = () => {
     </div>
   );
 };
-// Example FAQ items
+
+// FAQ Items
 const faqItems = [
-  { question: 'What is Young Ceo Entertainment' },
-  { question: 'How much does music distribution cost with Young CEO Entertainment ?' },
-  { question: 'Can I release music for multiple artists from one account ?' },
-  { question: 'Who owns the rights to my music when I distribute with YCE ?' },
-  { question: 'What does (In Review), (Scheduled) and (Sent To Stores) mean on my releases ?' },
-  { question: 'Can I release music in specific countries ?' },
-  { question: 'Can I view my music analytics in more detail ?' },
-  { question: 'How does Pre-Release work ?' },
-  { question: 'Can I edit or remove my release after its been sent to stores?' },
-  { question: 'What is Pre-Order Instant Gratification ?' },
-  { question: 'Can I set the price of my music ?' },
-  { question: 'Can I release someone elses music from my account ?' },
-  { question: 'Can I choose where my music is released ?' },
-  { question: 'How many tracks are on a single, EP and album ?' },
-  { question: 'When will my YCE Merch arrive ?' },
-  { question: 'Does YCE Music offer a free trial?' },
+  {
+    question: 'What do I need to start releasing music?',
+    answer: (
+      <>
+        Just{' '}
+        <a href="/signup" className="text-blue-500">
+          Become Young Ceo
+        </a>{' '}
+        using YCE Hub with your email address 🚀
+        <br />
+        <br />
+        Select the plans that are suitable for you 🎶
+        <br />
+        <br />
+        Choose the one that&apos;s right for you and follow the step-by-step create release form process.
+      </>
+    ),
+  },
+  {
+    question: "Can I edit my release after it's been completed but still in review?",
+    answer: "Yes, you can make edits to your release while it is still under review. However, once the release is live on stores, further changes cannot be made."
+  },
+  {
+    question: "If I remove a release from stores, edit and re-upload it, will the same Spotify or iTunes links work?",
+    answer: "No, removing and re-uploading a release will result in new links being generated. The original Spotify or iTunes links will no longer be valid."
+  },
+  {
+    question: "Can I add more stores to an existing release?",
+    answer: "Yes, you can add more stores to an existing release by editing the distribution options in your YCE account and selecting additional platforms."
+  },
+  {
+    question: "Can I change my release date?",
+    answer: "Yes, you can change your release date before the release has gone live. Simply update the release details in your YCE account."
+  },
+  {
+    question: "How do I change my artist or band name?",
+    answer: "To change your artist or band name, please contact YCE support. Keep in mind that this may affect your existing releases, and the change could take some time to reflect on all platforms."
+  },
 ];
 
-export default EditSupportComponent;
+export default EditSupport;

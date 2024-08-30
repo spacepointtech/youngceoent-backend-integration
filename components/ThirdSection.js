@@ -23,7 +23,7 @@ export default function ThirdSection() {
 
         {/* Text Section */}
         <div className="flex flex-col justify-center space-y-4">
-          <h2 className="text-5xl font-bold">WE’RE SOLELY FOR THE SMALL AND INDEPENDENT ARTISTS</h2>
+          <h2 className="text-5xl font-bold">WE&apos;RE SOLELY FOR THE SMALL AND INDEPENDENT ARTISTS</h2>
           <p className="text-2xl">
             YCE is your hub for discovering new artists. Hear under-the-radar artists here first.
           </p>

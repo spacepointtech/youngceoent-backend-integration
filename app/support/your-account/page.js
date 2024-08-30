@@ -1,7 +1,8 @@
+
 'use client';
 import '@/app/style.css';
 import React, { useState } from 'react';
-import { FaSearch, FaChevronRight, FaChevronDown, FaCheck } from 'react-icons/fa';
+import { FaSearch, FaChevronRight, FaChevronDown, FaUser } from 'react-icons/fa';
 
 const AccountSupport = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -51,8 +52,8 @@ const AccountSupport = () => {
       <div className="container mx-auto px-6 pb-16">
         <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
           <div className="flex flex-col">
-            <FaCheck className="text-4xl mb-4 opacity-30"/>
-            <h2 className="text-2xl font-semibold">The Basics</h2>
+            <FaUser className="text-4xl mb-4 opacity-30"/>
+            <h2 className="text-2xl font-semibold">Your Account</h2>
           </div>
           <div className="faq-logo">
             <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
@@ -88,24 +89,23 @@ const AccountSupport = () => {
   );
 };
 
-// Example FAQ items
+
 const faqItems = [
-  { question: 'What is Young Ceo Entertainment', answer: '' },
-  { question: 'How much does music distribution cost with Young CEO Entertainment ?', answer: '' },
-  { question: 'Can I release music for multiple artists from one account ?', answer: '' },
-  { question: 'Who owns the rights to my music when I distribute with YCE ?', answer: '' },
-  { question: 'What does (In Review), (Scheduled) and (Sent To Stores) mean on my releases ?', answer: '' },
-  { question: 'Can I release music in specific countries ?', answer: '' },
-  { question: 'Can I view my music analytics in more detail ?', answer: '' },
-  { question: 'How does Pre-Release work ?', answer: '' },
-  { question: 'Can I edit or remove my release after its been sent to stores?', answer: '' },
-  { question: 'What is Pre-Order Instant Gratification ?', answer: '' },
-  { question: 'Can I set the price of my music ?', answer: '' },
-  { question: 'Can I release someone elses music from my account ?', answer: '' },
-  { question: 'Can I choose where my music is released ?', answer: '' },
-  { question: 'How many tracks are on a single, EP and album ?', answer: '' },
-  { question: 'When will my YCE Merch arrive ?', answer: '' },
-  { question: 'Does YCE Music offer a free trial?', answer: '' },
+  { question: 'When is my subscription renewal date?', answer: 'Your subscription renewal date is typically one year from the date of your last payment. You can check the exact renewal date by logging into your account and navigating to the "Subscription" section.' },
+  { question: 'How do I see my orders & transaction history?', answer: 'To view your orders and transaction history, log into your account and go to the "Orders" section under your profile. There, you can see a detailed list of all your past transactions.' },
+  { question: 'When will I get a response from my support query?', answer: 'Support queries are typically responded to within 24-48 hours. During peak times, it may take slightly longer. You will receive a notification once your query has been addressed.' },
+  { question: 'What if I forgot my password?', answer: 'If you forgot your password, you can reset it by clicking on the "Forgot Password" link on the login page. Follow the instructions to receive a password reset link via email.' },
+  { question: 'Why has my account been suspended?', answer: 'Your account may be suspended due to non-payment, violation of terms of service, or suspicious activity. Please contact our support team to resolve the issue and regain access to your account.' },
+  { question: 'What currency will my transactions and royalties be displayed in?', answer: 'Transactions and royalties are displayed in the currency of your country. However, you can change this preference in the account settings if you wish to see it in a different currency.' },
+  { question: 'How do I change the email address linked to my account?', answer: 'To change the email address linked to your account, log in and go to the "Account Settings" section. From there, you can update your email address.' },
+  { question: 'Can I remove an artist from my plan?', answer: 'Yes, you can remove an artist from your plan by navigating to the "Manage Artists" section in your account. Select the artist you want to remove and confirm the action.' },
+  { question: 'How do I update the phone number linked to my YCE account?', answer: 'To update your phone number, go to the "Account Settings" section of your profile. Enter your new phone number and verify it through the confirmation code sent to your device.' },
+  { question: 'I\'ve been wrongly charged', answer: 'If you believe you have been wrongly charged, please contact our support team with the details of the transaction. We will investigate the issue and provide a resolution.' },
+  { question: 'Can I renew my subscription early?', answer: 'Yes, you can renew your subscription early by going to the "Subscription" section in your account. Choose the "Renew Now" option and complete the payment process.' },
+  { question: 'What is YCE Independent Label?', answer: 'YCE Independent Label is a subscription-based service that allows independent artists to distribute their music across major streaming platforms with additional support and promotional tools.' },
+  { question: 'I’ve been moved onto the new YCE Independent Label. How does it work?', answer: 'If you have been moved to the new YCE Independent Label, your existing releases will remain active. You will gain access to new features and tools designed to enhance your music distribution experience.' },
+  { question: 'What is Release Protection?', answer: 'Release Protection is an optional add-on that ensures your music remains live on streaming platforms even if your subscription lapses or is canceled. It also protects against accidental takedowns.' },
+  { question: 'How does the EPK Builder work?', answer: 'The EPK (Electronic Press Kit) Builder is a tool that helps you create a professional press kit for your music. It includes customizable templates, media upload options, and sharing capabilities to help you promote your work.' },
 ];
 
 export default AccountSupport;

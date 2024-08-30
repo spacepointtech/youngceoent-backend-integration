@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { FaSearch, FaChevronRight, FaChevronDown, FaEdit } from 'react-icons/fa';
+import { FaSearch, FaChevronRight, FaChevronDown, FaEdit, FaClipboard } from 'react-icons/fa';
 
 const LicenseSupport = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -50,8 +50,8 @@ const LicenseSupport = () => {
       <div className="container mx-auto px-6 pb-16">
         <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
           <div className="flex flex-col">
-            <FaEdit className="text-4xl mb-4 opacity-30"/>
-            <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
+            <FaClipboard className="text-4xl mb-4 opacity-30"/>
+            <h2 className="text-2xl font-semibold">Licensing, Copyright & Metadata</h2>
           </div>
           <div className="faq-logo">
             <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />

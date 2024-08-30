@@ -1,6 +1,7 @@
 'use client';
 import '@/app/style.css'
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { FaSearch, FaChevronRight, FaChevronDown, FaEdit } from 'react-icons/fa';
 
 const FaqComponent = () => {
@@ -55,7 +56,7 @@ const FaqComponent = () => {
             <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
           </div>
           <div className="faq-logo">
-            <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
+            <Image src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
           </div>
         </div>
         <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Answers to questions we are asked most often.</p>
@@ -88,7 +89,7 @@ const FaqComponent = () => {
   );
 };
 
-// Example FAQ items with sample answers
+// FAQ Items
 const faqItems = [
   {
     question: 'What do I need to start releasing music?',
@@ -96,24 +97,24 @@ const faqItems = [
       <>
         Just{' '}
         <a href="/signup" className="text-blue-500">
-          sign up
+          Become Young Ceo
         </a>{' '}
-        to YCE Hub for free with your email address 🚀
+        using YCE Hub with your email address 🚀
         <br />
         <br />
-        From your YCE Dashboard, you'll have the choice of creating a new Standard Release or Electronic/Dance Music Release! 🎶
+        Select the plans that are suitable for you 🎶
         <br />
         <br />
-        Choose the one that's right for you and follow the step-by-step process on the Ditto Release Builder.
+        Choose the one that&apos;s right for you and follow the step-by-step create release form process.
       </>
     ),
   },
-  { question: 'How much does music distribution cost with Young CEO Entertainment?', answer: 'Our music distribution service costs vary depending on the plan you choose. We offer both one-time payment and subscription-based options.' },
-  { question: 'How do I remove a release from stores?', answer: 'To remove a release, log in to your account, navigate to your releases, and choose the option to take down your music from all stores.' },
-  { question: 'What payment methods does YCE accept?', answer: 'We accept various payment methods, including credit/debit cards, PayPal, and bank transfers.' },
-  { question: 'Will YCE promote my music?', answer: 'While YCE focuses on distribution, we do offer additional promotional services at an extra cost. Contact us for more details.' },
+  { question: 'How much does music distribution cost with Young CEO Entertainment?', answer: 'Our music distribution service costs vary depending on the plan you choose. We offer both Single Track Payment and Subscription-based options.' },
+  { question: 'How do I remove a release from stores?', answer: 'To remove a release, log in to your account, navigate to your recent releases, and choose the option to take down your music from all stores.' },
+  { question: 'What payment methods does YCE accept?', answer: 'We accept various payment methods, including credit/debit cards, and bank transfers.' },
+  { question: 'Will YCE promote my music?', answer: 'While YCE focuses on distribution, we do offer additional promotional services at an extra cost. Contact us for more details or catch the form below to receive a call back from our team.' },
   { question: 'How much will I get paid?', answer: 'Your earnings depend on your distribution plan and the revenue generated from your music streams and downloads.' },
-  { question: 'How do I create a new release?', answer: 'To create a new release, log in to your account, click on "Create Release," and follow the steps to upload your music, artwork, and metadata.' },
+  { question: 'How do I create a new release?', answer: 'To create a new release, log in to your account, click on &quot;Create Release,&quot; and follow the steps to upload your music, artwork, and metadata.' },
   { question: 'Do I need to renew my subscription?', answer: 'If you are on a subscription-based plan, it will renew automatically unless you cancel it before the renewal date.' },
   { question: 'Can I edit or remove my release after it’s been sent to stores?', answer: 'Yes, you can edit or remove your release, but certain changes may take time to reflect in all stores.' },
   { question: 'Will YCE take any of my royalties?', answer: 'YCE does not take a percentage of your royalties. You keep 100% of your earnings.' },
