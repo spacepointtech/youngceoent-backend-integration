@@ -92,6 +92,25 @@ h2 {
   margin-bottom: 50px;
 }
 
+.hero-section {
+  background-image: url('/images/supportback.png'); /* Update with the correct path */
+  background-size: cover;
+  background-position: top;
+  height: 300px; /* Adjust as needed */
+}
+
+.search-container {
+  z-index: 10; /* Ensure search input is above the background */
+}
+
+.container {
+  z-index: 10;
+}
+
+
+
+
+
 
 /* Search Bar */
 .search-input {

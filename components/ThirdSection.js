@@ -14,8 +14,8 @@ export default function ThirdSection() {
             <Image
               src="/images/2.svg"
               alt="Illustration"
-              width={1000}
-              height={1000}
+              width={600}
+              height={600}
               className="illustration-style"
             />
           </div>

@@ -1,5 +1,6 @@
 'use client';
 import '@/app/style.css';
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaSearch, FaChevronRight, FaChevronDown, FaMobileAlt } from 'react-icons/fa';
 
@@ -55,13 +56,13 @@ const ApplicationSupportComponent = () => {
             <h2 className="text-2xl font-semibold">Young Ceo Entertainment App</h2>
           </div>
           <div className="faq-logo">
-            <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
+            <Image src="/images/logo.png" alt="Young CEO Entertainment" height={200} width={200} />
           </div>
         </div>
         <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>How to get Started releasing music</p>
         <p className={`text-sm opacity-50 mb-12 ${openIndex !== null ? 'blur-md' : ''}`}>{filteredFaqItems.length} Articles</p>
 
-        {/* FAQ Container */}
+       
         <div className="faq-container bg-[#484848] bg-opacity-[24%] border border-[#A6A6A6] rounded-lg p-6">
           <div className="faq-list">
             {filteredFaqItems.length > 0 ? (
@@ -88,7 +89,7 @@ const ApplicationSupportComponent = () => {
   );
 };
 
-// Example FAQ items
+
 const faqItems = [
   { question: 'How Can I get access to YCE App', answer: 'Hello Young Ceo! The App is Currently Under the development...!' },
   

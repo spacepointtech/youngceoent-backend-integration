@@ -1,8 +1,9 @@
 
 'use client';
 import '@/app/style.css';
+import Image from 'next/image';
 import React, { useState } from 'react';
-import { FaSearch, FaChevronRight, FaChevronDown, FaUser } from 'react-icons/fa';
+import { FaSearch, FaChevronRight, FaChevronDown, FaUser, FaHome } from 'react-icons/fa';
 
 const AccountSupport = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -52,11 +53,11 @@ const AccountSupport = () => {
       <div className="container mx-auto px-6 pb-16">
         <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
           <div className="flex flex-col">
-            <FaUser className="text-4xl mb-4 opacity-30"/>
+            <FaHome className="text-4xl mb-4 opacity-30"/>
             <h2 className="text-2xl font-semibold">Your Account</h2>
           </div>
           <div className="faq-logo">
-            <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
+            <Image src="/images/logo.png" alt="Young CEO Entertainment" height={200} width={200} />
           </div>
         </div>
         <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>How to get Started releasing music</p>

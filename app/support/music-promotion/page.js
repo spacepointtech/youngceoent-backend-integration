@@ -1,6 +1,7 @@
 'use client';
+import Image from 'next/image';
 import React, { useState } from 'react';
-import { FaSearch, FaChevronRight, FaChevronDown, FaEdit } from 'react-icons/fa';
+import { FaSearch, FaChevronRight, FaChevronDown, FaEdit, FaChartLine } from 'react-icons/fa';
 
 const PromotionSupport = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -50,14 +51,14 @@ const PromotionSupport = () => {
       <div className="container mx-auto px-6 pb-16">
         <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
           <div className="flex flex-col">
-            <FaEdit className="text-4xl mb-4 opacity-30"/>
-            <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
+            <FaChartLine className="text-4xl mb-4 opacity-30"/>
+            <h2 className="text-2xl font-semibold">Music Promotion</h2>
           </div>
           <div className="faq-logo">
-            <img src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
+            <Image src="/images/logo.png" alt="Young CEO Entertainment" height={200} width={200} />
           </div>
         </div>
-        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Answers to questions we are asked most often.</p>
+        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Learn More about Promotion services.</p>
         <p className={`text-sm opacity-50 mb-12 ${openIndex !== null ? 'blur-md' : ''}`}>{filteredFaqItems.length} Articles</p>
 
         {/* FAQ Container */}
@@ -87,43 +88,10 @@ const PromotionSupport = () => {
   );
 };
 
-// Example FAQ items with sample answers
 const faqItems = [
-  {
-    question: 'What do I need to start releasing music?',
-    answer: (
-      <>
-        Just{' '}
-        <a href="/signup" className="text-blue-500">
-          sign up
-        </a>{' '}
-        to YCE Hub for free with your email address 🚀
-        <br />
-        <br />
-        From your YCE Dashboard, you'll have the choice of creating a new Standard Release or Electronic/Dance Music Release! 🎶
-        <br />
-        <br />
-        Choose the one that's right for you and follow the step-by-step process on the Ditto Release Builder.
-      </>
-    ),
-  },
-  { question: 'How much does music distribution cost with Young CEO Entertainment?', answer: 'Our music distribution service costs vary depending on the plan you choose. We offer both one-time payment and subscription-based options.' },
-  { question: 'How do I remove a release from stores?', answer: 'To remove a release, log in to your account, navigate to your releases, and choose the option to take down your music from all stores.' },
-  { question: 'What payment methods does YCE accept?', answer: 'We accept various payment methods, including credit/debit cards, PayPal, and bank transfers.' },
-  { question: 'Will YCE promote my music?', answer: 'While YCE focuses on distribution, we do offer additional promotional services at an extra cost. Contact us for more details.' },
-  { question: 'How much will I get paid?', answer: 'Your earnings depend on your distribution plan and the revenue generated from your music streams and downloads.' },
-  { question: 'How do I create a new release?', answer: 'To create a new release, log in to your account, click on "Create Release," and follow the steps to upload your music, artwork, and metadata.' },
-  { question: 'Do I need to renew my subscription?', answer: 'If you are on a subscription-based plan, it will renew automatically unless you cancel it before the renewal date.' },
-  { question: 'Can I edit or remove my release after it’s been sent to stores?', answer: 'Yes, you can edit or remove your release, but certain changes may take time to reflect in all stores.' },
-  { question: 'Will YCE take any of my royalties?', answer: 'YCE does not take a percentage of your royalties. You keep 100% of your earnings.' },
-  { question: 'How long before my release date should I upload my music?', answer: 'We recommend uploading your music at least 2-3 weeks before your release date to ensure it is available on time.' },
-  { question: 'Can I choose where my music is released?', answer: 'Yes, you can select which platforms and regions your music is distributed to during the release creation process.' },
-  { question: 'When will royalties be paid into my account?', answer: 'Royalties are typically paid out monthly, but the timing can vary depending on the platform and payment method.' },
-  { question: 'How long will it take to review and approve my release?', answer: 'Review and approval usually take 1-2 business days, but it may vary depending on the complexity of your release.' },
-  { question: 'How can I find my Spotify URI?', answer: 'You can find your Spotify URI in the Spotify app by navigating to your profile or release, clicking on the three dots, and selecting "Copy Spotify URI".' },
-  { question: 'How does the affiliates program work?', answer: 'Our affiliates program allows you to earn commissions by referring new artists to our platform. Sign up through your account to get started.' },
-  { question: 'How to enter the Press Your Sound competition?', answer: 'To enter, submit your best track through our competition page before the deadline. Winners will be announced on our website and social media.' },
-  { question: 'How does YCE Music Mastering work?', answer: 'Our mastering service enhances your tracks with professional sound quality. Upload your tracks, and our team will handle the rest.' },
+  { question: 'What is Chartbreaker?', answer: 'Chartbreaker is our premium music promotion service designed to help your tracks achieve chart success. It includes targeted marketing campaigns, playlist placements, and analytics to boost your music’s visibility and performance.' },
+  { question: 'What promotional services do you offer?', answer: 'We offer a range of promotional services, including targeted social media campaigns, playlist pitching, and influencer partnerships. These services are designed to increase your music’s exposure and engagement across various platforms.' },
+  { question: 'What happens once I\'ve purchased Chartbreaker?', answer: 'After purchasing Chartbreaker, our team will contact you to discuss your promotional goals and strategies. We’ll set up your campaign, provide regular updates, and deliver comprehensive analytics on your music’s performance throughout the promotion period.' },
 ];
 
 export default PromotionSupport;

@@ -56,13 +56,13 @@ const EditSupport = () => {
             <h2 className="text-2xl font-semibold">Making Edits</h2>
           </div>
           <div className="faq-logo">
-            <Image src="/images/logo.png" alt="Young CEO Entertainment" height={100} width={150} />
+            <Image src="/images/logo.png" alt="Young CEO Entertainment" height={200} width={200} />
           </div>
         </div>
         <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Answers to questions we are asked most often.</p>
         <p className={`text-sm opacity-50 mb-12 ${openIndex !== null ? 'blur-md' : ''}`}>{filteredFaqItems.length} Articles</p>
 
-        {/* FAQ Container */}
+        
         <div className="faq-container bg-[#484848] bg-opacity-[24%] border border-[#A6A6A6] rounded-lg p-6">
           <div className="faq-list">
             {filteredFaqItems.length > 0 ? (
@@ -89,7 +89,7 @@ const EditSupport = () => {
   );
 };
 
-// FAQ Items
+
 const faqItems = [
   {
     question: 'What do I need to start releasing music?',
