@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -31,10 +30,6 @@
 :root.dark {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 0, 0, 0;
-}
-
-.font-rubik-glitch {
-  font-family: 'Rubik Glitch', sans-serif;
 }
 
 /* body {
@@ -631,5 +626,3 @@ a:hover {
 .disclaimer-button:hover {
   background-color: #1c3d99; /* Darker shade for hover effect */
 }
-
-

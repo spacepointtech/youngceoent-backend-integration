@@ -1,5 +1,6 @@
 'use client';
 import '@/app/style.css'
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaSearch, FaChevronRight, FaChevronDown, FaDollarSign } from 'react-icons/fa';
 
@@ -55,7 +56,7 @@ const GetPaidComponent = () => {
             <h2 className="text-2xl font-semibold">Getting Paid</h2>
           </div>
           <div className="faq-logo">
-            <img src="/images/logo.png" alt="Young CEO Entertainment" height={200} width={200} />
+            <Image src="/images/logo.png" alt="Young CEO Entertainment" height={200} width={200} />
           </div>
         </div>
         <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Info on earning and withdrawing royalties</p>

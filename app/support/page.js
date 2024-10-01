@@ -21,7 +21,7 @@ const SupportPage = () => {
       <div className="hero-section relative">
         <div className="container mx-auto text-left pt-24 pb-16">
           <h1 className="text-4xl font-semibold mb-8 text-left ml-10">How Can We Help?</h1>
-
+ 
           {/* Search Bar */}
           <div className="relative search-container mx-10">
             <FaSearch className="absolute left-1rem top-1/2 transform -translate-y-1/2 text-white search-icon" />

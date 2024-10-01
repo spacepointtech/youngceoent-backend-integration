@@ -6,6 +6,8 @@ export default function Document() {
       <Head>
         {/* Add Razorpay script here */}
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        { /* favicon link*/}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
         <Main />

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaSearch, FaChevronRight, FaChevronDown, FaEdit, FaClipboard } from 'react-icons/fa';
+import '@/app/style.css';
 
 const LicenseSupport = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -95,11 +96,11 @@ const faqItems = [
   },
   {
     question: 'What is a UPC/EAN code?',
-    answer: 'A UPC (Universal Product Code) or EAN (European Article Number) is a barcode that helps digital platforms identify your release. It’s required for distributing your music. YCE can provide UPC codes for your releases if you don’t have one.'
+    answer: 'A UPC (Universal Product Code) or EAN (European Article Number) is a barcode that helps digital platforms identify your release. It\’s required for distributing your music. YCE can provide UPC codes for your releases if you don\’t have one.'
   },
   {
     question: 'Can I release cover songs, remixes, or songs using samples?',
-    answer: 'Yes, you can release cover songs, remixes, or songs using samples, but you must have the necessary rights and permissions. For cover songs, you’ll need a mechanical license. For remixes and samples, you must get approval from the original creators or rights holders.'
+    answer: 'Yes, you can release cover songs, remixes, or songs using samples, but you must have the necessary rights and permissions. For cover songs, you\’ll need a mechanical license. For remixes and samples, you must get approval from the original creators or rights holders.'
   },
   {
     question: 'Will YCE promote my music?',
@@ -111,15 +112,15 @@ const faqItems = [
   },
   {
     question: 'Can I work with other distributors & record labels at the same time as YCE?',
-    answer: 'Yes, you can work with other distributors and record labels simultaneously, but it’s important to ensure that your contracts do not conflict. Some distributors and labels may have exclusivity clauses, so be sure to review your agreements carefully.'
+    answer: 'Yes, you can work with other distributors and record labels simultaneously, but it\’s important to ensure that your contracts do not conflict. Some distributors and labels may have exclusivity clauses, so be sure to review your agreements carefully.'
   },
   {
     question: 'What is an ISRC code?',
-    answer: 'An ISRC (International Standard Recording Code) is a unique identifier for a specific recording of a song. It is used to track sales, streams, and radio plays. YCE provides ISRC codes if you don’t already have them for your tracks.'
+    answer: 'An ISRC (International Standard Recording Code) is a unique identifier for a specific recording of a song. It is used to track sales, streams, and radio plays. YCE provides ISRC codes if you don\’t already have them for your tracks.'
   },
   {
     question: 'Can I use existing ISRC or UPC codes?',
-    answer: 'Yes, you can use existing ISRC or UPC codes if you already have them. If you’re re-releasing music that has been previously distributed, using the same codes will help maintain consistency in tracking your music’s performance.'
+    answer: 'Yes, you can use existing ISRC or UPC codes if you already have them. If you\’re re-releasing music that has been previously distributed, using the same codes will help maintain consistency in tracking your music\’s performance.'
   },
   {
     question: 'Where can I see my contract with Young Ceo Entertainment?',
@@ -127,7 +128,7 @@ const faqItems = [
       <>
         You can view your contract and all the associated terms and conditions by visiting the 
         <a href="/terms-and-conditions" className="text-blue-500"> Terms & Conditions </a> 
-        page. It's important to review this document to understand your rights and obligations as a Young Ceo.
+        page. It&apos;s important to review this document to understand your rights and obligations as a Young Ceo.
       </>
     ),
   },

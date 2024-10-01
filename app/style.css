@@ -92,25 +92,6 @@ h2 {
   margin-bottom: 50px;
 }
 
-.hero-section {
-  background-image: url('/images/supportback.png'); /* Update with the correct path */
-  background-size: cover;
-  background-position: top;
-  height: 300px; /* Adjust as needed */
-}
-
-.search-container {
-  z-index: 10; /* Ensure search input is above the background */
-}
-
-.container {
-  z-index: 10;
-}
-
-
-
-
-
 
 /* Search Bar */
 .search-input {
@@ -180,4 +161,17 @@ h2 {
   .search-input {
     padding-left: 44px;
   }
+}
+
+
+
+/* Rel-Quest2 Tooltip */
+
+.tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 14px 8px;
+  border-radius: 4px;
+  z-index: 15;
 }
