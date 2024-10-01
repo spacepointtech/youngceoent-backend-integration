@@ -119,10 +119,11 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-
+          <Link href='/dashboard/question3'>
           <button className="bg-white text-black w-full py-2 mt-6 rounded-lg font-semibold">
             Next
           </button>
+          </Link>
         </div>
       </div>
     </div>
