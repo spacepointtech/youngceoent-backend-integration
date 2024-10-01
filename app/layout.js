@@ -8,6 +8,7 @@ export default function Layout({ children }) {
 
   // Hide Navbar on the login/signup/reset page
   const hideNavbar = pathname === '/login' || pathname === '/signup' || pathname === '/reset' 
+  || pathname === '/subscription' 
   || pathname === '/dashboard' || pathname === '/dashboard/question1' || pathname === '/dashboard/question2' 
   || pathname === '/dashboard/question3' || pathname === '/dashboard/question4' 
   || pathname === '/dashboard/question5' || pathname === '/dashboard/question6' 
