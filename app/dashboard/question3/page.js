@@ -10,69 +10,73 @@ export default function Dashboard() {
   const [spotifyLink, setSpotifyLink] = useState('');
 
   return (
-    <div className="flex h-screen bg-black font-poppins overflow-hidden">
-           {/* Sidebar */}
-      <div className="sidebar bg-white h-full w-80 text-black flex flex-col justify-between p-4 rounded-r-3xl">
-        <div>
-          {/* Profile Section */}
-          <div className="bg-black bg-opacity-77 rounded-lg p-4 mb-8">
-            <div className="flex items-center">
-              <Image
-                src="/images/avtaar.png"
-                height={50}
-                width={50}
-                alt="Profile"
-              />
-              <div className="ml-4 w-full">
-                <div className="flex justify-between items-center">
-                  <div className="w-3/4 bg-gray-400 rounded-full h-1 mt-2">
-                    <div className="bg-white h-1 rounded-full" style={{ width: '20%' }}></div>
-                  </div>
-                  <span className="text-xs text-gray-600 ml-2">20%</span>
-                </div>
-                <Link href="/login/dashboard/question1">
-                  <p className="text-xs mt-2 py-1 text-center border border-white rounded-lg text-white leading-none" style={{ fontSize: '10px' }}>
-                    Complete your profile
-                  </p>
-                </Link>
-              </div>
+    <div className="flex h-screen bg-black font-poppins overflow-auto">
+                               {/* Sidebar */}
+<div className="sidebar bg-white h-[960px] w-[330px] text-black flex flex-col justify-between p-4 rounded-r-3xl">
+  <div>
+    {/* Profile Section */}
+    <div className="bg-black bg-opacity-77 rounded-lg p-4 mb-4">
+      <div className="flex items-center">
+        <Image
+          src="/images/avtaar.png"
+          height={50}
+          width={50}
+          alt="Profile"
+        />
+        <div className="ml-4 w-full">
+          <div className="flex justify-between items-center">
+            <div className="w-3/4 bg-gray-400 rounded-full h-1 mt-2">
+              <div className="bg-white h-1 rounded-full" style={{ width: '20%' }}></div>
             </div>
+            <span className="text-xs text-gray-600 ml-2">20%</span>
           </div>
-
-          {/* Logo */}
-          <div className="logo mb-4 flex justify-center">
-            <Image src="/images/blacklogo.png" alt="Young CEO Entertainment" height={400} width={400} />
-          </div>
-
-          {/* Menu */}
-          <nav className="mt-4">
-            <ul className="space-y-4 text-center">
-              <li className="p-2 rounded-r-lg flex items-center">
-                <FaMusic className="mr-3" /> Music
-              </li>
-              <li className="p-2 rounded-r-lg flex items-center">
-                <FaUsers className="mr-3" /> Audience
-              </li>
-              <li className="p-2 rounded-r-lg flex items-center">
-                <FaTshirt className="mr-3" /> Merch
-              </li>
-              <li className="p-2 rounded-r-lg flex items-center">
-                <FaVideo className="mr-3" /> Video & Visuals
-              </li>
-              <li className="p-2 rounded-r-lg flex items-center">
-                <FaCog className="mr-3" /> Settings
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        {/* Logout */}
-        <div className="mb-4">
-          <button className="bg-black w-full py-3 rounded-lg flex items-center justify-center text-white">
-            <FaSignOutAlt className="mr-2" /> Logout
-          </button>
+          <Link href="/dashboard/question1">
+            <p className="text-xs mt-2 py-1 text-center border border-white rounded-lg text-white leading-none" style={{ fontSize: '10px' }}>
+              Complete your profile
+            </p>
+          </Link>
         </div>
       </div>
+    </div>
+
+    {/* Logo */}
+    <div className="logo mb-0 flex justify-center"> 
+      <Image src="/images/blacklogo.png" alt="Young CEO Entertainment" height={180} width={180} />
+    </div>
+
+    {/* Menu */}
+    <nav className="mt-0">
+      <ul className="space-y-2 text-left">
+      
+        <li className="menu-item p-3 rounded-lg flex items-center justify-start hover:bg-black hover:text-white transition-all">
+          <FaMusic className="text-xl ml-5" /> <Link href="/dashboard"> <span className="text-xl ml-2"> Music </span> </Link>
+        </li>
+        <li className="menu-item p-3 rounded-lg flex items-center justify-start hover:bg-black hover:text-white transition-all">
+          <FaUsers className="text-xl ml-5" /> <Link href="/dashboard/audience"> <span className="text-xl ml-2"> Audience </span> </Link>
+        </li>
+        <li className="menu-item p-3 rounded-lg flex items-center justify-start hover:bg-black hover:text-white transition-all">
+          <FaTshirt className="text-xl ml-5" /> <Link href=" "> <span className="text-xl ml-2">Merch</span> </Link>
+        </li>
+        <li className="menu-item p-3 rounded-lg flex items-center justify-start hover:bg-black hover:text-white transition-all">
+          <FaVideo className="text-xl ml-5" /> <Link href=" "><span className="text-xl ml-2"> Video & Visuals </span> </Link> 
+        </li>
+        
+        <li className="menu-item p-3 rounded-lg flex items-center justify-start hover:bg-black hover:text-white transition-all">
+          <FaCog className="text-xl ml-5" /> <Link href="/dashboard/settings"> <span className="text-xl ml-2"> Settings </span> </Link>
+        </li>
+      </ul>
+    </nav>
+
+    {/* Logout */}
+    <div className="mt-7">
+      <Link href="/login">
+      <button className="bg-black w-full py-3 rounded-lg flex items-center justify-center text-white hover:bg-gray-800 transition-all">
+        <FaSignOutAlt className="mr-2" /> Logout
+      </button>
+      </Link>
+    </div>
+  </div>
+</div>
 
       {/* Main Content */}
       <div className="w-full flex flex-col items-center justify-center relative">

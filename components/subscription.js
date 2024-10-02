@@ -79,9 +79,9 @@ const SubscriptionPage = () => {
     }
   };
 
-  if (!isClient) {
-    return null; // Prevent rendering on the server side
-  }
+  // if (!isClient) {
+  //   return null; // Prevent rendering on the server side
+  // }
 
   return (
     <div className="relative min-h-screen bg-black bg-opacity-40 font-poppins">
